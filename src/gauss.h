@@ -9,4 +9,7 @@
  */
 int eliminate(Matrix *mat, Matrix *b);
 
+void select_elem(int i, Matrix *mat, Matrix *b);
+
+void swap_rows(int i, int j, Matrix *mat, Matrix *b);
 #endif
