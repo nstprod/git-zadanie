@@ -1,6 +1,5 @@
 #include "gauss.h"
 #include <math.h>
-
 /**
  * Zwraca 0 - elimnacja zakonczona sukcesem
  * Zwraca 1 - macierz osobliwa - dzielenie przez 0
@@ -49,5 +48,4 @@ void swap_rows(int i, int j, Matrix *mat, Matrix *b) {
 	b->data[i][0] = b->data[j][0];
 	b->data[j][0] = tmp;
 }
-
 
