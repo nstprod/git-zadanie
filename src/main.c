@@ -17,9 +17,23 @@ int main(int argc, char ** argv) {
 	printToScreen(b);
 
 	res = eliminate(A,b);
+	if (res == 1) {
+		printf("Dzielenie przez zero!! Macierz osobliwa\n");
+		return -3;
+	} else if (res == 2) {
+		printf("Nieprawidlowe rozmiary macierzy!! Sprawdz dane\n");
+		return -5;
+	}
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
 		res = backsubst(x,A,b);
+		if(res == 1) {
+		printf("Dzielenie przez zero!! Niepoprawne dane\n");
+		return -4;
+		} else if (res == 2) {
+		printf("Nieprawidlowe rozmiary macierzy!! Sprawdz dane\n");
+		return -5;
+		}
 
 		printToScreen(x);
 	  freeMatrix(x);

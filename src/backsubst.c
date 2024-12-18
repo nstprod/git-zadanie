@@ -9,7 +9,7 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 	int row = mat->r;
 	int collumn = mat->c;
 
-	if(row != collumn) {
+	if(mat->r != b->r) {
 		return 2;
 	}
 

@@ -6,6 +6,8 @@
  */
 int eliminate(Matrix *mat, Matrix *b){
     int i, j, k;
+    if (mat->r != b->r)
+	    return 2;
     for (i = 0; i < mat->c-1; i++){
 	select_elem(i, mat, b);    
     	double pivot = mat->data[i][i];
